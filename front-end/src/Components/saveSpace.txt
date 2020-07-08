@@ -1,0 +1,28 @@
+<Typography>
+            <Box fontFamily="Monospace" fontSize={52} m={1}>
+                View Airmen Status
+            </Box>
+            <TableContainer component={Paper}>
+            <Table aria-label="simple table">
+            <TableHead>
+                <TableRow>
+                    <TableCell> Airman ID </TableCell>
+                    <TableCell> First Name </TableCell>
+                    <TableCell> Middle Initial </TableCell>
+                    <TableCell> Last Name </TableCell>
+                    <TableCell> Rank </TableCell>
+                    <TableCell> Squadron </TableCell>
+                    <TableCell> Flight </TableCell>
+                    <TableCell> Office Symbol </TableCell>
+                    <TableCell> Date of Arrival (DOA) </TableCell>
+                    <TableCell> Has Drivers License </TableCell>
+                    <TableCell> Is Stationed Overseas </TableCell>
+                    <TableCell> Edit Airman </TableCell>
+                    <TableCell> Delete Airman </TableCell>
+                </TableRow>
+            </TableHead>
+            </Table>
+            </TableContainer>
+        </Typography>
+
+        css= visible property
