@@ -1,0 +1,30 @@
+version : '3'
+
+services:
+    backend: 
+        build: back-end/
+        container_name: alex_app_backend
+        depends_on: 
+            - 'database'
+        ports:
+            - 9001:9001
+
+    database:
+        image: postgres
+        container_name: alex_app_database
+        volumes:
+            - ./server/database.sql:/docker-entrypoint-initdb.d/database.sql
+        environment: 
+            POSTGRES_PASSWORD: "usafisthebest"
+            POSTGRES_USER:  "usaf_user"
+            POSTGRES_DB:  "usaf_app_group_project"
+
+    fontend:
+            build: front-end/
+            container_name: alex_frontend
+            depends_on: 
+                - 'backend'
+            ports: 
+                - 9002:9002
+
+# PERSISS DAA ACROSS DEPLOYMENTS SO DATA ISNT LOST
