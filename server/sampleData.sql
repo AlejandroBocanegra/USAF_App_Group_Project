@@ -161,46 +161,53 @@ VALUES ('t',
 
 DELETE
 FROM amn
-WHERE amn_id = 20
-OR amn_id = 21
-OR amn_id = 22
-OR amn_id = 23
-OR amn_id = 24
-OR amn_id = 25
-OR amn_id = 26
-OR amn_id = 27
-OR amn_id = 28
- OR amn_id = 29;
+WHERE 
+           amn_id = 60
+        OR amn_id = 61
+        OR amn_id = 62
+        OR amn_id = 63
+        OR amn_id = 64
+        OR amn_id = 65
+        OR amn_id = 66
+        OR amn_id = 67
+        OR amn_id = 68
+        OR amn_id = 69;
 
 -- sqd table
 
 DELETE
 FROM sqd
-WHERE sqd_amn_id = 20
-    OR sqd_amn_id = 21
-    OR sqd_amn_id = 22
-    OR sqd_amn_id = 23
-    OR sqd_amn_id = 24
-    OR sqd_amn_id = 25
-    OR sqd_amn_id = 26
-    OR sqd_amn_id = 27
-    OR sqd_amn_id = 29
-    OR sqd_amn_id = 28;
+WHERE 
+       sqd_amn_id = 60
+    OR sqd_amn_id = 61
+    OR sqd_amn_id = 62
+    OR sqd_amn_id = 63
+    OR sqd_amn_id = 64
+    OR sqd_amn_id = 65
+    OR sqd_amn_id = 66
+    OR sqd_amn_id = 67
+    OR sqd_amn_id = 68
+    OR sqd_amn_id = 69;
 
 --base table
 
 DELETE
 FROM base AS b
-WHERE b.base_amn_id = 20
-    OR b.base_amn_id = 21
-    OR b.base_amn_id = 22
-    OR b.base_amn_id = 23
-    OR b.base_amn_id = 24
-    OR b.base_amn_id = 25
-    OR b.base_amn_id = 26
-    OR b.base_amn_id = 27
-    OR b.base_amn_id = 28
-    OR b.base_amn_id = 29;
+WHERE 
+       b.base_amn_id = 60
+    OR b.base_amn_id = 61
+    OR b.base_amn_id = 62
+    OR b.base_amn_id = 63
+    OR b.base_amn_id = 64
+    OR b.base_amn_id = 65
+    OR b.base_amn_id = 66
+    OR b.base_amn_id = 67
+    OR b.base_amn_id = 68
+    OR b.base_amn_id = 69;
+
+SELECT * FROM amn;
+SELECT * FROM sqd;
+SELECT * FROM base;
 
 --How to add data to three tables with one querry
 WITH ins1 AS

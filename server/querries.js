@@ -49,7 +49,7 @@ const addAmn = (req, res) => {
                 )
                 VALUES 
                 ( 
-                    $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
+                    $1, $2, $3, $4, $5, $6, $7, to_timestamp($8, 'YYYY-MM-DD'), $9, $10
                 )
                 RETURNING amn_id;`,
                 values,
@@ -111,7 +111,7 @@ const addAmn = (req, res) => {
                                 )
                             VALUES
                                 (
-                                    $1, $2, $3, $4, $5 
+                                    $1, $2, to_timestamp ($3, 'YYYY-MM-DD'), to_timestamp ($4, 'YYYY-MM-DD'), $5 
                                 )`,
                             values,
                             (error, result) => {
@@ -121,7 +121,7 @@ const addAmn = (req, res) => {
                             }
                         )
                         res.status(200).send(JSON.stringify(
-                            `Your request has gone through, thank you.`
+                            req.body
                         ))
                     }
                 }

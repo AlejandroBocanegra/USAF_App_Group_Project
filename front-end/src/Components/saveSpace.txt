@@ -26,3 +26,140 @@
         </Typography>
 
         css= visible property
+
+
+        first_name, mi, last_name, rank, squadron, flight, office_symbol, date_of_arrival, drivers_license, overseas, css, tempo_band, vulnerability_window,eligable_to_pcs, mpf, new_commers_brief, diving_brief, foreign_county_law_brief, network_rights,
+
+        ln 35
+          //setState statements
+    // const [first_name, setfirst_name] = useState("");
+    // const [mi, setmi] = useState("");
+    // const [last_name, setlast_name] = useState("");
+    // const [rank, setrank] = useState();
+    // const [squadron, setsquadron] = useState();
+    // const [flight, setflight] = useState();
+    // const [office_symbol, setoffice_symbol] = useState();
+    // const [date_of_arrival, setdate_of_arrival] = useState();
+    // const [drivers_license, setdrivers_license] = useState();
+    // const [overseas, setoverseas] = useState();
+    // const [css, setcss] = useState();
+    // const [tempo_band, settempo_band] = useState();
+    // const [vulnerability_window, setvulnerability_window] = useState();
+    // const [eligable_to_pcs, seteligable_to_pcs] = useState();
+    // const [mpf, setmpf] = useState();
+    // const [new_commers_brief, setnew_commers_brief] = useState();
+    // const [diving_brief, setdiving_brief] = useState();
+    // const [foreign_county_law_brief, setforeign_county_law_brief] = useState();
+    // const [network_rights, setnetwork_rights] = useState();
+    // const onSubmitForm = async event => {
+    //     event.preventDefault();
+
+    //     try {
+    //         // const body = { 
+        first_name, 
+        mi, 
+        last_name, 
+        rank, 
+        squadron, 
+        flight, 
+        office_symbol, 
+        date_of_arrival, 
+        drivers_license, 
+        overseas, 
+        css, 
+        tempo_band, 
+        vulnerability_window, 
+        eligable_to_pcs, 
+        mpf, 
+        new_commers_brief, 
+        diving_brief, 
+        foreign_county_law_brief, 
+        network_rights, };
+
+    //         const response = await fetch("http://localhost:9001/create/in_proc_amn", {
+    //             method: "POST",
+    //             headers: { "Content-Type": "application/json" },
+    //             body: JSON.stringify(body)
+
+    //         });
+
+    //         window.location = "/";
+    //         console.log(response);
+    //     } catch (err) {
+    //         console.error(err.message);
+    //     }
+    // };
+
+    DOM manip grab by ID
+
+amn_id 
+first_name 
+mi 
+last_name 
+rank 
+squadron 
+flight 
+office_symbol 
+date_of_arrival 
+drivers_license 
+overseas 
+squadron_ID 
+css 
+tempo_band 
+vulnerability_window 
+eligable_to_pcs 
+squadron_amn_id 
+base_id 
+mpf 
+new_commers_brief 
+diving_brief 
+foreign_county_law_brief 
+network_rights 
+base_amn_id 
+
+state= {
+        drivers_license: "",
+    }
+
+    change = event4 => {
+        this.PaymentResponse.onChange ({ [ event4.target.name ]: event4.target.value });
+        this.setState ({
+            [ event4.target.name ]: event4.target.value
+        });
+    };
+
+    validate = () => {
+        let isError = false;
+        const errors = {
+            drivers_license_error:"",
+        };
+
+        if (!this.StaticRange.drivers_license == "yes" || !this.StaticRange.drivers_license == "no") {
+            isError = true;
+            errors.drivers_license_error = `Must be a "Yes" or "No" Response`
+        };
+
+        this.setState({
+            ...this.state,
+            ...errors
+        });
+
+        return isError;
+
+    };
+
+    onSubmit = event4 => {
+        event4.preventDefault ();
+        const err = this.validate ();
+        if (!err) {
+            //Clears form
+            this.setState({
+                drivers_license: "",
+            });
+
+            this.props.onChange ({
+                drivers_license: "",
+            });
+            
+        };
+    };

@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { makeStyles, getLuminance } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -9,6 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
+//Material UI
 const useStyles = makeStyles((theme) => ({
     table: {
         minWidth: 650,
@@ -19,9 +20,12 @@ const useStyles = makeStyles((theme) => ({
         },
       },
 }));
+//End Material UI
 
 const ViewAmn = () => {
+    //Material UI
     const classes = useStyles();
+    //End Material UI
 
     const [ amn, setAmn ] = useState([]);
 
@@ -42,8 +46,6 @@ const ViewAmn = () => {
         () => {
         getAmn();
     },[],);
-
-console.log (amn);
 
     return (
         <Fragment>
