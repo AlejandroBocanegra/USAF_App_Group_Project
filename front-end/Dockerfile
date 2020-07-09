@@ -10,4 +10,4 @@ RUN npm install
 
 EXPOSE 9002
 
-CMD [ "node", "server.js"]
+CMD [ "npm", "start"]
